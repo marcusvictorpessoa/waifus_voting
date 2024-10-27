@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 export function HeaderView() {
@@ -6,7 +7,7 @@ export function HeaderView() {
             <span className="text-white text-2xl italic font-semibold">Waifus &hearts;</span>
             <div className="flex gap-2 items-center">
                 <span className="text-lg text-white font-medium">Olá</span>
-                <img className="w-[50px] h-[50px] rounded-full" src="/roxy.jpeg" alt="" />
+                <Image className="w-[50px] h-[50px] rounded-full" width={50} height={50} src="/roxy.jpeg" alt="waifu do bebelo roxo" />
             </div>
         </header>
     )
