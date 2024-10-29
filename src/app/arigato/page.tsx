@@ -1,16 +1,17 @@
 import BackgroundSpinner from "@/components/BackgroundSpinner";
-import { Header } from "../components/Header";
+import { Header } from "@/components/Header";
+import Image from "next/image";
 
-export default function Home() {
+
+export default function Arigato() {
   return (
     <main className="w-[100vw] h-[100vh]">
       {false && <BackgroundSpinner />}
       <Header />
       <div className="flex justify-center items-center w-[100%] h-[90%] bg-[url(/snow.gif)] bg-no-repeat bg-cover font-[family-name:var(--font-geist-sans)]">
         <div className="flex flex-col justify-center items-center gap-4 max-sm:w-[80%] sm:w-[40%] h-[50%] backdrop-blur-lg shadow-md rounded-md">
-          <span className="text-black text-center w-[70%] text-lg bg-white rounded-sm p-1">Vote en la waifu que usted gustou, pero consciente!</span>
-          <input className="border text-black h-[40px] text-lg border-black rounded-sm w-[70%] p-1" type="text" placeholder="Digite aqui su nombre" />
-          <button className="border text-white border-[#f89fa1] h-[40px] rounded-sm bg-[#f89fa1] w-[70%] p-1 hover:bg-[#fabdbd]">VOTAR</button>
+            <Image src={'/waifu_heart.jpg'} alt="waifu coração" width={150} height={150} className="rounded-full" />
+          <span className="text-black text-center w-[70%] text-lg bg-white rounded-sm p-1">Muchas gracias por votar!</span>
         </div>
       </div>
     </main>
