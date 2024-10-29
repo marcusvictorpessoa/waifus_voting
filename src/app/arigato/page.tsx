@@ -11,7 +11,7 @@ export default function Arigato() {
       <div className="flex justify-center items-center w-[100%] h-[90%] bg-[url(/snow.gif)] bg-no-repeat bg-cover font-[family-name:var(--font-geist-sans)]">
         <div className="flex flex-col justify-center items-center gap-4 max-sm:w-[80%] sm:w-[40%] h-[50%] backdrop-blur-lg shadow-md rounded-md">
             <Image src={'/waifu_heart.jpg'} alt="waifu coração" width={150} height={150} className="rounded-full" />
-          <span className="text-black text-center w-[70%] text-lg bg-white rounded-sm p-1">Muchas gracias por votar!</span>
+          <span className="text-black text-center w-[70%] text-lg bg-white rounded-sm p-1">Muchas gracias por votar, Onee chan!</span>
         </div>
       </div>
     </main>
