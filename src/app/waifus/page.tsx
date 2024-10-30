@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Waifus() {
 
-  const { waifus, loading, statusModal, vote } = useWaifus();
+  const { waifus, loading } = useWaifus();
   const { openModal, modal } = useModal()
 
   const { name } = useVotante()

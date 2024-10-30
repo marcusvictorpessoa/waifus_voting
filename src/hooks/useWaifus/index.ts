@@ -9,16 +9,6 @@ export default function useWaifus(){
     const [waifus, setWaifus] = useState([] as {id: string, name: string}[]);
     const [loading, setLoading] = useState(false);
 
-    const [statusModal, setStatusModal] = useState(false)
-
-    function closeModal(){
-        setStatusModal(false)
-    }
-
-    function openModal(){
-        setStatusModal(true)
-    }
-
     const navigation = useRouter()
 
 
@@ -57,8 +47,6 @@ export default function useWaifus(){
 
     async function vote(){
 
-        openModal();
-
         /*setLoading(true);
 
         const votanteId = localStorage.getItem("votante")
@@ -80,9 +68,5 @@ export default function useWaifus(){
         loading,
         waifus,
         vote,
-        openModal,
-        closeModal,
-        statusModal,
-        setStatusModal
     }
 }
