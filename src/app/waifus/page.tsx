@@ -37,7 +37,7 @@ export default function Waifus() {
           return (
             <div key={waifu.id} onClick={() => openModal(waifu.name, keyVote.current, waifu.id)} className="mt-4 cursor-pointer p-2 max-sm:w-[100%] sm:w-[100%] h-[170px] backdrop-blur-lg shadow-md rounded-md">
               <div className="flex flex-row items-start gap-4">
-                <Image src={`/${waifu.name}.jpeg`} alt='waifu image' width={100} height={100} className="rounded-full" />
+                <Image src={`https://github.com/marcusvictorpessoa/waifus_voting/blob/main/public/${waifu.name.toLocaleLowerCase()}.jpeg`} alt='waifu image' width={100} height={100} className="rounded-full" />
                 <span className="bg-white p-1 rounded-sm font-semibold">{waifu.name}</span>
               </div>
             </div>

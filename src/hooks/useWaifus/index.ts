@@ -38,6 +38,8 @@ export default function useWaifus(){
                     // docSnap.data() will be undefined in this case
                     console.log("No such document!");
                 }
+            } else {
+                navigation.replace('/')
             }
         } catch (error) {
             console.log(error)
