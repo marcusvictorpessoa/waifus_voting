@@ -21,7 +21,7 @@ export default function useSignIn(){
         const votante = localStorage.getItem('votante')
         if(votante){
             setLoading(false);
-            navigation.replace('/waifus')
+            navigation.push('/waifus')
         } else {
             setLoading(false);
         }
@@ -42,6 +42,11 @@ export default function useSignIn(){
     async function register(){
         setLoading(true);
         try {
+            const userExists = localStorage.getItem('votante')
+            if(userExists){
+                setLoading(false)
+                return 
+            }
             const docRef = await addDoc(collection(DBFirestore, "votantes"), {nombre: nombre, votado: false});
             localStorage.setItem('votante', docRef.id)
             setNombre("")
