@@ -21,7 +21,7 @@ export default function Result() {
                 <span className="p-1 text-black font-semibold">{index + 1}º</span>
                 <Image unoptimized={true} src={`/${waifu.name.toLowerCase()}.jpeg`} alt='waifu image' width={100} height={100} className="rounded-full" />
                 <div className="flex flex-col gap-2">
-                  <span className="bg-white p-1 rounded-sm font-semibold">{waifu.name}</span>
+                  <span className="bg-white text-black p-1 rounded-sm font-semibold">{waifu.name}</span>
                   <span className="text-white font-bold bg-green-500 p-1 rounded-sm">Votos: {waifu.votes.length}</span>
                 </div>
               </div>

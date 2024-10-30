@@ -3,7 +3,6 @@ import BackgroundSpinner from "@/components/BackgroundSpinner";
 import { Header } from "@/components/Header";
 import Modal from "@/components/Modal";
 import { useModal } from "@/context/modal";
-import { useVotante } from "@/context/votante";
 import useWaifus from "@/hooks/useWaifus";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -14,12 +13,10 @@ export default function Waifus() {
   const { openModal, modal } = useModal()
   const keyVote = useRef("")
 
-  const { name } = useVotante()
-
   useEffect(() => {
     const idDelVotante = localStorage.getItem('votante');
-    const generateKeyVote = `${name}-${idDelVotante}`;
-    keyVote.current = generateKeyVote;
+    //const generateKeyVote = `${name}-${idDelVotante}`;
+    keyVote.current = idDelVotante!;
   },[])
 
   
@@ -38,7 +35,7 @@ export default function Waifus() {
             <div key={waifu.id} onClick={() => openModal(waifu.name, keyVote.current, waifu.id)} className="mt-4 cursor-pointer p-2 max-sm:w-[100%] sm:w-[100%] h-[170px] backdrop-blur-lg shadow-md rounded-md">
               <div className="flex flex-row items-start gap-4">
                 <Image unoptimized={true} src={`/${waifu.name.toLowerCase()}.jpeg`} alt='waifu image' width={100} height={100} className="rounded-full" />
-                <span className="bg-white p-1 rounded-sm font-semibold">{waifu.name}</span>
+                <span className="bg-white p-1 text-black rounded-sm font-semibold">{waifu.name}</span>
               </div>
             </div>
           )
