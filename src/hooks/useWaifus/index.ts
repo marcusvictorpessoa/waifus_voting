@@ -71,7 +71,7 @@ export default function useWaifus(){
 
                 const nombre = sfVotanteRef.get('nombre');
 
-                const keyVote = `${nombre}-${waifuId}`
+                const keyVote = `${nombre}-${votanteId}`
 
                 transaction.update(waifuRef, { votes: arrayUnion(keyVote)})
                 transaction.update(votanteRef, { votado: true})
